@@ -1,9 +1,8 @@
-public class Calculator 
-{
-    public static void main(String[] args)
-    {
+public class Calculator {
+    public static void main(String[] args) {
+        Operations op = new Operations();
         UserInterface ui = new UserInterface();
-        ui.createWindow();
-        System.out.println("Test");
-    }  
+        ui.createWindow(op);
+        ui.showWindow();
+    }
 }
