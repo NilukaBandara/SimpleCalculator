@@ -5,7 +5,7 @@ import javax.swing.*;
 //Class for the UI
 class UserInterface {
     static JFrame m_frame;
-    static JTextField m_texttWindow;
+    public static JTextField m_texttWindow;
 
     UserInterface() {
         m_frame = new JFrame("Simple calculator");
@@ -22,7 +22,9 @@ class UserInterface {
     public static void showWindow() {
         // Display
         m_frame.pack(); // Set the size of the window appropriate for the contents
-        m_frame.setSize(200, 200);
+        m_frame.setSize(230, 210);
+        m_frame.setLocationRelativeTo ( null );
+        m_frame.setResizable(false);
         m_frame.setVisible(true);
     }
 

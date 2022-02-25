@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="calculatorGUI" />
-        <module name="ass3" />
+        <module name="SimpleCalculator" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SimpleCalculator" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
