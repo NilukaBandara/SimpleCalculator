@@ -3,83 +3,96 @@ import java.awt.event.*;
 //Class that performs the calculations
 public class Operations implements ActionListener {
 
-    static double answer = 0;
+    static double finalAnswer = 0;
     // store operator and operands
-    String s0, s1, s2;
+    String firstOperator, operand, secondOperator;
 
     Operations(){
-        s0 = s1 = s2 = "";
+        firstOperator = operand = secondOperator = "";
     }
 
 
     // Function that catches the click of a button
     public void actionPerformed(ActionEvent event) {
-        String s = event.getActionCommand();
-        System.out.println(s);
-        UserInterface.m_texttWindow.setText(s);
+        String m_inputString = event.getActionCommand();
+        System.out.println(m_inputString);
+        UserInterface.m_texttWindow.setText(m_inputString);
 
         // If a number
-            if ((s.charAt(0) >= '0' && s.charAt(0) <= '9') || s.charAt(0) == '.') {
+            if (isNumeric(m_inputString)) {
                 // if operand is present then add to second no
-                if (!s1.equals(""))
-                    s2 = s2 + s;
+                if (!operand.equals(""))
+                    secondOperator = secondOperator + m_inputString;
                 else
-                    s0 = s0 + s;
+                    firstOperator = firstOperator + m_inputString;
 
                 // set the value of text
 
-                UserInterface.m_texttWindow.setText(s0 + s1 + s2);
+                UserInterface.m_texttWindow.setText(firstOperator + operand + secondOperator);
 
             }
 
 
         // Equals
-        else if (s.charAt(0) == '=') {
+        else if (m_inputString.charAt(0) == '=') {
 
-            double ans = doOperations(s1);
+            double m_answer = doOperations(operand);
 
                 // set the value of text
-            UserInterface.m_texttWindow.setText(s0 + s1 + s2 + "=" + ans);
+            UserInterface.m_texttWindow.setText(firstOperator + operand + secondOperator + "=" + m_answer);
 
             // convert it to string
-            s0 = Double.toString(ans);
+            firstOperator = Double.toString(m_answer);
 
-            s1 = s2 = "";
+            operand = secondOperator = "";
         }
         // Deletion
-        else if (s.charAt(0) == 'C') {
+        else if (m_inputString.charAt(0) == 'C') {
             // clear the one letter
-            s0 = s1 = s2 = "";
+            firstOperator = operand = secondOperator = "";
 
             // set the value of text
-            UserInterface.m_texttWindow.setText(s0 + s1 + s2);
+            UserInterface.m_texttWindow.setText(firstOperator + operand + secondOperator);
         }
         // Other
         else {
-                // System.out.println("Unhandled input: " + s);
+                // System.out.println("Unhandled input: " + m_inputString);
                 // if there is no operand
-                if (s1.equals("") || s2.equals(""))
-                    s1 = s;
+                if (operand.equals("") || secondOperator.equals(""))
+                    operand = m_inputString;
                 else {
-                    double ans;
+                    double m_answer;
 
-                    ans = doOperations(s1);
+                    m_answer = doOperations(operand);
 
                     // convert it to string
-                    s0 = Double.toString(ans);
+                    firstOperator = Double.toString(m_answer);
 
                     // place the operator
-                    s1 = s;
+                    operand = m_inputString;
 
                     // make the operand blank
-                    s2 = "";
+                    secondOperator = "";
                 }
 
                 // set the value of text
-                UserInterface.m_texttWindow.setText(s0 + s1 + s2);
+                UserInterface.m_texttWindow.setText(firstOperator + operand + secondOperator);
             }
 
         }
+
+    // To check the input string is a number or not
+    public boolean isNumeric(String strNum) {
+        if (strNum == null) {
+            return false;
+        }
+        try {
+            double d = Double.parseDouble(strNum);
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+        return true;
+    }
 
     public double performAddition(String x, String y){
         return (Double.parseDouble(x) + Double.parseDouble(y));
@@ -101,18 +114,18 @@ public class Operations implements ActionListener {
 
         switch (operation) {
             // Addition
-            case "+" -> answer = performAddition(s0, s2);
+            case "+" -> finalAnswer = performAddition(firstOperator, secondOperator);
 
             // Subtraction
-            case "-" -> answer = performSubtraction(s0, s2);
+            case "-" -> finalAnswer = performSubtraction(firstOperator, secondOperator);
 
             // Division
-            case "/" -> answer = performDivision(s0, s2);
+            case "/" -> finalAnswer = performDivision(firstOperator, secondOperator);
 
             // Multiplication
-            case "*" -> answer = performMultiplication(s0, s2);
+            case "*" -> finalAnswer = performMultiplication(firstOperator, secondOperator);
         }
 
-        return answer;
+        return finalAnswer;
     }
 }
