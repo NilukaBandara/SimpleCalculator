@@ -1,5 +1,3 @@
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 
 //Class for the UI
@@ -23,7 +21,7 @@ class UserInterface {
         // Display
         m_frame.pack(); // Set the size of the window appropriate for the contents
         m_frame.setSize(230, 210);
-        m_frame.setLocationRelativeTo ( null );
+        m_frame.setLocationRelativeTo(null);
         m_frame.setResizable(false);
         m_frame.setVisible(true);
     }
