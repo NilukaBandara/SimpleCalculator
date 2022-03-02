@@ -29,7 +29,7 @@ public class Operations implements ActionListener {
         }
 
         // Equals
-        else if (m_inputString == "=") {
+        else if (m_inputString.equals("=")) {
 
             double m_answer = doOperations(operand);
 
@@ -42,7 +42,7 @@ public class Operations implements ActionListener {
             operand = secondOperator = "";
         }
         // Deletion
-        else if (m_inputString == "C") {
+        else if (m_inputString.equals("C")) {
             // clear the one letter
             firstOperator = operand = secondOperator = "";
 
