@@ -9,11 +9,12 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <java.version>17</java.version>
-        <maven.compiler.source>7</maven.compiler.source>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>14</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
 
-   
+
 
 
 </project>
