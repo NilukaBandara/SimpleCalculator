@@ -34,7 +34,7 @@ jobs:
           when: always
 
       - store_test_results:
-          path: testResults
+          path: ~/testResults/
 
 
 # Invoke jobs via workflows
