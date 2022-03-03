@@ -26,6 +26,11 @@ jobs:
       - run:
           name: Test
           command: mvn test
+
+      - run:
+          name: makeDirectory
+          command: mkdir -p ~/testResults/
+
       - store_test_results:
           path: testResults
 
