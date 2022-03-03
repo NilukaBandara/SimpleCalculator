@@ -7,7 +7,7 @@ public class OperationsTest {
 
     @Test
     public void testPerformAddition() {
-        double obj1= 2.0;
+        double obj1= 5.0;
         double obj2= operations.performAddition("2", "3");
         assertEquals(obj1,obj2, 0.0);
     }
