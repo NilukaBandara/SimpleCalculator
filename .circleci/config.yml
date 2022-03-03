@@ -24,15 +24,14 @@ jobs:
           command: mvn -B -DskipTests clean package
       # Then run your tests!
       - run:
-          name: Test
-          command: mvn test
+            name: makeDirectory
+            command: mkdir -p ~/testResults/
+            find: -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/testResults/ \;
+            when: always
 
       - run:
-          name: makeDirectory
-          command: mkdir -p ~/testResults/
-          find: -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/testResults/ \;
-          when: always
-
+          name: Test
+          command: mvn test
       - store_test_results:
           path: ~/testResults/
 
