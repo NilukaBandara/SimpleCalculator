@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cc3440a-6119-494d-a6f6-7ab693bb7160" name="Changes" comment="reverting some stuff">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2cc3440a-6119-494d-a6f6-7ab693bb7160" name="Changes" comment="added workspace.xml">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/calculatorGUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/calculatorGUI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/OperationsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/OperationsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +53,12 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.testRunning" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Repos F\JetBeansRepos\src" />
+    </key>
   </component>
   <component name="RunManager" selected="Maven.calculatorGUI [test]">
     <configuration name="Calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -179,7 +189,13 @@
       <option name="presentableId" value="LOCAL−00010" />
       <updated>1646321565568</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL−00011" summary="added workspace.xml">
+      <created>1646322138331</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1646322138331</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +213,7 @@
     <MESSAGE value="Swapped &quot;==&quot; for .equals" />
     <MESSAGE value="Just trying some stuff" />
     <MESSAGE value="reverting some stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="reverting some stuff" />
+    <MESSAGE value="added workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added workspace.xml" />
   </component>
 </project>
