@@ -25,7 +25,7 @@ jobs:
       # Then run your tests!
       - run:
           name: Test
-          command: mvn test -D test="OperationsTest"
+          command: mvn test -Dtest="OperationsTest"
 
 
 # Invoke jobs via workflows
