@@ -30,7 +30,7 @@ jobs:
       - run:
           name: makeDirectory
           command: mkdir -p ~/testResults/
-          find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/testResults/ \;
+          find: -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/testResults/ \;
           when: always
 
       - store_test_results:
