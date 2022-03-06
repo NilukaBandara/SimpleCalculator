@@ -10,15 +10,16 @@ public class OperationIntegrationTest {
     {
         //Setup
         Operations op = new Operations();
-        ActionEvent fakeEvent = new ActionEvent(op, 1001, "1");
+        UserInterface ui;
+        ActionEvent fakeEvent = new ActionEvent(ui, 1001, "1");
 
         //Test
         op.actionPerformed(fakeEvent);
 
-        fakeEvent = new ActionEvent(op, 1001, "+");
+        fakeEvent = new ActionEvent(ui, 1001, "+");
         op.actionPerformed(fakeEvent);
 
-        fakeEvent = new ActionEvent(op, 1001, "1");
+        fakeEvent = new ActionEvent(ui, 1001, "1");
         op.actionPerformed(fakeEvent);
 
         double two = 2;
