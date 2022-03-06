@@ -39,4 +39,12 @@ public class OperationsTest {
         double obj2= operations.performAddition("6", "7");
         assertEquals(obj1,obj2, 0.0);
     }
+
+    @Test
+    public void testPerformMultiplicationTwo() {
+        double obj1= 20.0;
+        double obj2= operations.performMultiplication("7", "8");
+        assertEquals(obj1,obj2, 0.0);
+    }
+
 }
