@@ -6,11 +6,12 @@ class UserInterface {
     public static JTextField m_texttWindow;
 
     UserInterface() {
-        m_frame = new JFrame("Simple calculator");
+
     }
 
     public static void createWindow(Operations op) {
         // Setup
+        m_frame = new JFrame("Simple calculator");
         m_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         m_frame.setDefaultLookAndFeelDecorated(true);
 
