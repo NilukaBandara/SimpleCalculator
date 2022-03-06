@@ -54,4 +54,11 @@ public class OperationsTest {
         assertEquals(obj1,obj2, 0.0);
     }
 
+    @Test
+    public void testPerformDivisionTwo() {
+        double obj1= 6.0;
+        double obj2= operations.performDivision("40", "5");
+        assertEquals(obj1,obj2, 0.0);
+    }
+
 }
