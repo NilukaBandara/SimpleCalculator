@@ -32,7 +32,6 @@ jobs:
           name: makeDirectory
           command: mkdir -p ~/testResults/
           cp /target/surefire-reports/*.xml ~/testResults
-          when: always
 
 
 # Invoke jobs via workflows
