@@ -4,9 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import static org.junit.Assert.*;
-public class OperationIntegrationTest implements ActionListener {
+public class OperationIntegrationTest {
 
-    @Override
     public void actionPerformed(ActionEvent e) {
         //Nothing
     }
@@ -16,16 +15,16 @@ public class OperationIntegrationTest implements ActionListener {
     {
         //Setup
         Operations op = new Operations();
-        OperationIntegrationTest fakeObj = new OperationIntegrationTest();
-        ActionEvent fakeEvent = new ActionEvent(fakeObj, 1001, "1");
+        UserInterface ui = new UserInterface();
+        ActionEvent fakeEvent = new ActionEvent(ui, 1001, "1");
 
         //Test
         op.actionPerformed(fakeEvent);
 
-        fakeEvent = new ActionEvent(fakeObj, 1001, "+");
+        fakeEvent = new ActionEvent(ui, 1001, "+");
         op.actionPerformed(fakeEvent);
 
-        fakeEvent = new ActionEvent(fakeObj, 1001, "1");
+        fakeEvent = new ActionEvent(ui, 1001, "1");
         op.actionPerformed(fakeEvent);
 
         double two = 2;
