@@ -47,4 +47,11 @@ public class OperationsTest {
         assertEquals(obj1,obj2, 0.0);
     }
 
+    @Test
+    public void testPerformSubtractionTwo() {
+        double obj1= 7.0;
+        double obj2= operations.performSubtraction("8", "13");
+        assertEquals(obj1,obj2, 0.0);
+    }
+
 }
