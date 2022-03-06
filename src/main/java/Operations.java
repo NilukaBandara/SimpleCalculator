@@ -13,8 +13,14 @@ public class Operations implements ActionListener {
 
     // Function that catches the click of a button
     public void actionPerformed(ActionEvent event) {
+        //Testing purpose, remove me later
+        int id = event.getID();
+
         String m_inputString = event.getActionCommand();
         UserInterface.m_texttWindow.setText(m_inputString);
+
+        //Test
+        System.out.println(id + " "  + m_inputString);
 
         // If a number
         if (isNumeric(m_inputString)) {
