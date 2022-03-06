@@ -32,7 +32,7 @@ jobs:
           path: ~/testResults/
       - run:
           name: makeDirectory
-          command: mkdir -p ~/testResults/ | cp /target/surefire-reports/*.xml ~/testResults
+          command: mkdir -p ~/testResults/ | cp *.xml /target/surefire-reports/ ~/testResults
 
 workflows:
   sample: # This is the name of the workflow, feel free to change it to better match your workflow.
