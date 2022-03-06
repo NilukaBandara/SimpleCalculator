@@ -29,15 +29,7 @@ jobs:
           name: Test
           command: mvn test
       - store_test_results:
-          path: ~/testResults/
-      - run:
-          name: makeDirectory
-          command: mkdir -p ~/testResults/ | find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/testResults/ \;
-            #- run:
-            #name: makeDirectory
-            #command: mkdir -p ~/testResults/
-          #find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/testResults/ \;
-          #when: always
+          path: ~/target/surefire-reports/
 
 workflows:
   sample: # This is the name of the workflow, feel free to change it to better match your workflow.
