@@ -18,22 +18,26 @@ public class OperationIntegrationTest {
         Operations op = new Operations();
         UserInterface ui = new UserInterface();
         ui.m_texttWindow = new JTextField(16);
-        ActionEvent fakeEvent = new ActionEvent(ui, 1001, "1");
+
 
         //Test
-        op.actionPerformed(fakeEvent);
-
-        fakeEvent = new ActionEvent(ui, 1001, "+");
+        ActionEvent fakeEvent = new ActionEvent(ui, 1001, "1");
         op.actionPerformed(fakeEvent);
 
         fakeEvent = new ActionEvent(ui, 1001, "1");
         op.actionPerformed(fakeEvent);
 
+        fakeEvent = new ActionEvent(ui, 1001, "+");
+        op.actionPerformed(fakeEvent);
+
+        fakeEvent = new ActionEvent(ui, 1001, "9");
+        op.actionPerformed(fakeEvent);
+
         fakeEvent = new ActionEvent(ui, 1001, "=");
         op.actionPerformed(fakeEvent);
 
-        double two = 2;
-        assertEquals(op.finalAnswer,two, 0.0);
+        double answer = 20;
+        assertEquals(op.finalAnswer,answer, 0.0);
         //Teardown
     }
 
