@@ -10,7 +10,6 @@ public class OperationIntegrationTest {
     {
         //Setup
         Operations op = new Operations();
-        UserInterface ui = new UserInterface();
         ActionEvent fakeEvent = new ActionEvent(op, 1001, "1");
 
         //Test
