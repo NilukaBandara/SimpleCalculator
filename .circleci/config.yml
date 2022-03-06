@@ -30,7 +30,7 @@ jobs:
           path: ~/testResults/
       - run:
           name: makeDirectory
-          command: mkdir -p ~/testResults/
+          command: mkdir -p ~/testResults/ |
           cp /target/surefire-reports/*.xml ~/testResults
 
 
