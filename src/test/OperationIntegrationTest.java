@@ -1,5 +1,6 @@
 import org.junit.Test;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -16,6 +17,7 @@ public class OperationIntegrationTest {
         //Setup
         Operations op = new Operations();
         UserInterface ui = new UserInterface();
+        ui.m_texttWindow = new JTextField(16);
         ActionEvent fakeEvent = new ActionEvent(ui, 1001, "1");
 
         //Test
