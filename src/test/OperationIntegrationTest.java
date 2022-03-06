@@ -29,6 +29,9 @@ public class OperationIntegrationTest {
         fakeEvent = new ActionEvent(ui, 1001, "1");
         op.actionPerformed(fakeEvent);
 
+        fakeEvent = new ActionEvent(ui, 1001, "=");
+        op.actionPerformed(fakeEvent);
+
         double two = 2;
         assertEquals(op.finalAnswer,two, 0.0);
         //Teardown
