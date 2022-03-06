@@ -11,6 +11,8 @@ jobs:
     # You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
     # Be sure to update the Docker image tag below to openjdk version of your application.
     # A list of available CircleCI Docker Convenience Images are available here: https://circleci.com/developer/images/image/cimg/openjdk
+    # Invoke jobs via workflows
+    # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
     docker:
       - image: cimg/openjdk:17.0.2
     # Add steps to the job
@@ -33,9 +35,6 @@ jobs:
           command: mkdir -p ~/testResults/ |
           cp /target/surefire-reports/*.xml ~/testResults
 
-
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
   sample: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
