@@ -32,4 +32,11 @@ public class OperationsTest {
         double obj2= operations.performDivision("30", "5");
         assertEquals(obj1,obj2, 0.0);
     }
+
+    @Test
+    public void testPerformAdditionOne() {
+        double obj1= 7.0;
+        double obj2= operations.performAddition("6", "7");
+        assertEquals(obj1,obj2, 0.0);
+    }
 }
