@@ -34,7 +34,7 @@ public class OperationsTest {
     }
     //test case of addition 
     @Test
-    public void testPerformAdditionOne() {
+    public void testPerformAdditionTwo() {
         double foo= 13.0;
         //test 
         double bar= operations.performAddition("6", "7");
