@@ -35,37 +35,37 @@ public class OperationsTest {
     //test case of addition 
     @Test
     public void testPerformAdditionOne() {
-        double obj1= 13.0;
+        double foo= 13.0;
         //test 
-        double obj2= operations.performAddition("6", "7");
-        assertEquals(obj1,obj2, 0.0);
+        double bar= operations.performAddition("6", "7");
+        assertEquals(foo,bar, 0.0);
         //teardown
     }
     //test case of Multiplication
     @Test
     public void testPerformMultiplicationTwo() {
-        double obj1= 56.0;
+        double foo= 56.0;
         //test 
-        double obj2= operations.performMultiplication("7", "8");
-        assertEquals(obj1,obj2, 0.0);
+        double bar= operations.performMultiplication("7", "8");
+        assertEquals(foo,bar, 0.0);
         //teardown
     }
     //test case of Subtraction
     @Test
     public void testPerformSubtractionTwo() {
-        double obj1= 3.0;
+        double foo= 3.0;
         //test 
-        double obj2= operations.performSubtraction("13", "10");
-        assertEquals(obj1,obj2, 0.0);
+        double bar= operations.performSubtraction("13", "10");
+        assertEquals(foo,bar, 0.0);
         //teardown
     }
     //test case of Division
     @Test
     public void testPerformDivisionTwo() {
-        double obj1= 4.0;
+        double foo= 4.0;
         //test 
-        double obj2= operations.performDivision("24", "6");
-        assertEquals(obj1,obj2, 0.0);
+        double bar= operations.performDivision("24", "6");
+        assertEquals(foo,bar, 0.0);
         //teardown
     }
 
