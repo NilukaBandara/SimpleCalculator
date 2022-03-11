@@ -32,33 +32,41 @@ public class OperationsTest {
         double obj2= operations.performDivision("30", "5");
         assertEquals(obj1,obj2, 0.0);
     }
-
+    //test case of addition 
     @Test
     public void testPerformAdditionOne() {
         double obj1= 13.0;
+        //test 
         double obj2= operations.performAddition("6", "7");
         assertEquals(obj1,obj2, 0.0);
+        //teardown
     }
-
+    //test case of Multiplication
     @Test
     public void testPerformMultiplicationTwo() {
         double obj1= 56.0;
+        //test 
         double obj2= operations.performMultiplication("7", "8");
         assertEquals(obj1,obj2, 0.0);
+        //teardown
     }
-
+    //test case of Subtraction
     @Test
     public void testPerformSubtractionTwo() {
         double obj1= 3.0;
+        //test 
         double obj2= operations.performSubtraction("13", "10");
         assertEquals(obj1,obj2, 0.0);
+        //teardown
     }
-
+    //test case of Division
     @Test
     public void testPerformDivisionTwo() {
         double obj1= 4.0;
+        //test 
         double obj2= operations.performDivision("24", "6");
         assertEquals(obj1,obj2, 0.0);
+        //teardown
     }
 
 }
