@@ -11,7 +11,7 @@ import org.junit.runners.Suite.SuiteClasses;
 @RunWith(Suite.class)
 @SuiteClasses({ additionTest.class, OperationIntegrationTest.class })
 
-public class OperationsTestsuite extends TestCase {
+public class OperationsTestsuite {
 
 
 }
