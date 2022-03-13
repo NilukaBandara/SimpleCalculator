@@ -13,4 +13,8 @@ import org.junit.runners.Suite.SuiteClasses;
 
 public class suiteTest {
 
+    @Test
+    public void testAdditionPass() {
+        OperationsTest.testPerformSubtraction("15","5","10");
+    }
 }

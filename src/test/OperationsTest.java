@@ -13,10 +13,10 @@ public class OperationsTest {
     }
 
     @Test
-    public void testPerformSubtraction() {
-        double obj1= 5.0;
-        double obj2= operations.performSubtraction("15", "10");
-        assertEquals(obj1,obj2, 0.0);
+    public static void testPerformSubtraction(String a, String b, String c) {
+        double expected= Double.parseDouble(a);
+        double actual= operations.performSubtraction(b, c);
+        assertEquals(expected,actual, 0.0);
     }
 
     @Test
