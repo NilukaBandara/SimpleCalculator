@@ -100,6 +100,7 @@ public class Operations implements ActionListener {
     }
 
     public double performDivision(String x, String y) {
+
         return (Double.parseDouble(x) / Double.parseDouble(y));
     }
 

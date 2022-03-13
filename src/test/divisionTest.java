@@ -10,7 +10,7 @@ public class divisionTest {
         Operations operations = new Operations();
         double expected = 3.0;
         //Test
-        double actual = operations.performDivision("10","5");
+        double actual = operations.performDivision("10","0");
         assertNotEquals(expected, actual, 0.0);
 
     }
