@@ -15,7 +15,7 @@ public class OperationsTest {
     @Test
     public void testPerformSubtraction() {
         double expected= 15;
-        double actual= operations.performSubtraction("4","11");
+        double actual= operations.performSubtraction("26","11");
         assertEquals(expected,actual, 0.0);
     }
 
