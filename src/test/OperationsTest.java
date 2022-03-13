@@ -13,9 +13,9 @@ public class OperationsTest {
     }
 
     @Test
-    public static void testPerformSubtraction(String a, String b, String c) {
-        double expected= Double.parseDouble(a);
-        double actual= operations.performSubtraction(b, c);
+    public void testPerformSubtraction() {
+        double expected= 15;
+        double actual= operations.performSubtraction("4","11");
         assertEquals(expected,actual, 0.0);
     }
 

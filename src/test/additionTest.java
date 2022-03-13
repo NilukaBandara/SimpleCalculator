@@ -24,6 +24,4 @@ public class additionTest {
         assertNotEquals(expected, actual, 0.0);
 
     }
-
-
 }
