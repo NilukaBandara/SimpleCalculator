@@ -18,10 +18,10 @@ public class additionTest {
     public void testAdditionPass() {
         //Setup
         Operations operations = new Operations();
-        double expected = 15.0;
+        double expected = 12.0;
         //Test
         double actual = operations.performAddition("9", Double.toString(operations.performAddition("1","2")));
-        assertNotEquals(expected, actual, 0.0);
+        assertEquals(expected, actual, 0.0);
 
     }
 }
