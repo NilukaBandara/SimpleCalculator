@@ -5,7 +5,9 @@ import static org.junit.Assert.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
+
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
@@ -76,23 +78,30 @@ public class SuiteTest {
         //Teardown
         //...
     }
-    @Test
-    public void runDataDrivenTest()
-    {
-        File testDataFile = new File("testingData/operationsIntegrationTest");
-        Scanner fileReader = new Scanner(testDataFile);
-        String operations = fileReader.nextLine();
-        double expectedAnswer = fileReader.nextDouble();
-        DataDrivenOperationsTest(operations, expectedAnswer);
-    }
 
-    public void DataDrivenOperationsTest(String testData, double answer)
+    @Test
+    public void DataDrivenOperationsTest()
     {
         //Setup
         Operations op = new Operations();
         UserInterface ui = new UserInterface();
         ui.m_texttWindow = new JTextField();
         ActionEvent event;
+        String testData = "";
+        double answer = Double.NEGATIVE_INFINITY;
+
+        //Read the test data
+        File testDataFile = new File("testingData/operationsIntegrationTest");
+        try {
+            Scanner fileReader = new Scanner(testDataFile);
+            testData = fileReader.nextLine();
+            answer = fileReader.nextDouble();
+        }
+        catch(FileNotFoundException e)
+        {
+            System.out.println("An error occurred reading a file.");
+            e.printStackTrace();
+        }
 
         //Test
         //Iterate through chars in testData and produce events
