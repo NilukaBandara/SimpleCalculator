@@ -7,7 +7,8 @@
     <list default="true" id="2cc3440a-6119-494d-a6f6-7ab693bb7160" name="Changes" comment="Attempting to save test data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/calculatorGUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/calculatorGUI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/OperationIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/OperationIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/suiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/suiteTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +58,7 @@
       <recent name="F:\Repos F\JetBeansRepos\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.calculatorGUI [test]">
+  <component name="RunManager" selected="JUnit.subtractionTest.testSubtractionFail">
     <configuration name="Calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Calculator" />
       <module name="calculatorGUI" />
@@ -79,6 +80,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="OperationsTest" />
       <option name="METHOD_NAME" value="testPerformAddition" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="subtractionTest.testSubtractionFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="calculatorGUI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="subtractionTest" />
+      <option name="METHOD_NAME" value="testSubtractionFail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -111,6 +122,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.subtractionTest.testSubtractionFail" />
         <item itemvalue="JUnit.OperationsTest" />
         <item itemvalue="JUnit.OperationsTest.testPerformAddition" />
         <item itemvalue="Application.Calculator" />
