@@ -21,11 +21,11 @@ public class OperationsTest {
         double answer = Double.NEGATIVE_INFINITY;
 
         //Read the test data
-        File testDataFile = new File("testingData/operationsIntegrationTest");
+        File testDataFile = new File("src/test/testingData/operationsIntegrationTest");
         try {
             Scanner fileReader = new Scanner(testDataFile);
             testData = fileReader.nextLine();
-            answer = fileReader.nextDouble();
+            answer = Double.parseDouble(fileReader.nextLine());
         }
         catch(FileNotFoundException e)
         {
@@ -37,15 +37,10 @@ public class OperationsTest {
         //Iterate through chars in testData and produce events
         for(int i = 0; i < testData.length(); i++)
         {
-            String symbol = new String(testData.substring(i));
-
+            String symbol = new String(testData.substring(i, i+1));
             event = new ActionEvent(ui, 1001, symbol);
             op.actionPerformed(event);
         }
-
-        System.out.println("Jalapeno");
-        System.out.println(op.finalAnswer);
-        System.out.println(answer);
 
         assertEquals(answer, op.finalAnswer, 0.0);
         //Teardown
