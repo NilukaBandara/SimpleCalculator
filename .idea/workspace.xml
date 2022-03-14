@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cc3440a-6119-494d-a6f6-7ab693bb7160" name="Changes" comment="Attempting to save test data">
+    <list default="true" id="2cc3440a-6119-494d-a6f6-7ab693bb7160" name="Changes" comment="Modified suiteTest and IntegrationTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculatorGUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/calculatorGUI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,14 +55,7 @@
       <recent name="F:\Repos F\JetBeansRepos\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Maven.calculatorGUI [test]">
-    <configuration name="Calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Calculator" />
-      <module name="calculatorGUI" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.SuiteTest">
     <configuration name="OperationsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="calculatorGUI" />
       <option name="PACKAGE_NAME" value="" />
@@ -79,6 +70,35 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="OperationsTest" />
       <option name="METHOD_NAME" value="testPerformAddition" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SubtractionTest.testSubtractionFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="calculatorGUI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SubtractionTest" />
+      <option name="METHOD_NAME" value="testSubtractionFail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SuiteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="calculatorGUI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SuiteTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SuiteTest.OperationsTestSuite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="calculatorGUI" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SuiteTest" />
+      <option name="METHOD_NAME" value="OperationsTestSuite" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -111,9 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SuiteTest" />
+        <item itemvalue="JUnit.SuiteTest.OperationsTestSuite" />
+        <item itemvalue="JUnit.SubtractionTest.testSubtractionFail" />
         <item itemvalue="JUnit.OperationsTest" />
         <item itemvalue="JUnit.OperationsTest.testPerformAddition" />
-        <item itemvalue="Application.Calculator" />
       </list>
     </recent_temporary>
   </component>
@@ -276,7 +298,14 @@
       <option name="presentableId" value="LOCAL−00025" />
       <updated>1646324996690</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Modified suiteTest and IntegrationTest">
+      <created>1647242010613</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1647242010613</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -297,6 +326,7 @@
     <MESSAGE value="added workspace.xml" />
     <MESSAGE value="Made test bad" />
     <MESSAGE value="Attempting to save test data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Attempting to save test data" />
+    <MESSAGE value="Modified suiteTest and IntegrationTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified suiteTest and IntegrationTest" />
   </component>
 </project>

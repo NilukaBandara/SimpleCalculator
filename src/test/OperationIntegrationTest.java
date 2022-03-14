@@ -1,8 +1,6 @@
 import org.junit.Test;
 
-import javax.swing.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import static org.junit.Assert.*;
 public class OperationIntegrationTest {
@@ -12,33 +10,27 @@ public class OperationIntegrationTest {
     }
 
     @Test
-    public void testSomeFakeInputs()
+    public void performIntegrationFailTest()
     {
         //Setup
-        Operations op = new Operations();
-        UserInterface ui = new UserInterface();
-        ui.m_texttWindow = new JTextField(16);
+        Operations operations = new Operations();
+        double expected = 12.0;
+        //Test  10 + 3
+        double actual = operations.performAddition(Double.toString(operations.performMultiplication("5","2")), Double.toString(operations.performAddition(Double.toString(operations.performSubtraction("3","2")),Double.toString(operations.performDivision("4","2")))));
+        assertNotEquals(expected, actual, 0.0);
 
+    }
 
-        //Test
-        ActionEvent fakeEvent = new ActionEvent(ui, 1001, "1");
-        op.actionPerformed(fakeEvent);
+    @Test
+    public void performIntegrationPassTest()
+    {
+        //Setup
+        Operations operations = new Operations();
+        double expected = 10.0;
+        //Test  2 + (-2 + 10)
+        double actual = operations.performAddition(Double.toString(operations.performMultiplication("1","2")), Double.toString(operations.performAddition(Double.toString(operations.performSubtraction("3","5")),Double.toString(operations.performDivision("10","1")))));
+        assertEquals(expected, actual, 0.0);
 
-        fakeEvent = new ActionEvent(ui, 1001, "1");
-        op.actionPerformed(fakeEvent);
-
-        fakeEvent = new ActionEvent(ui, 1001, "+");
-        op.actionPerformed(fakeEvent);
-
-        fakeEvent = new ActionEvent(ui, 1001, "9");
-        op.actionPerformed(fakeEvent);
-
-        fakeEvent = new ActionEvent(ui, 1001, "=");
-        op.actionPerformed(fakeEvent);
-
-        double answer = 20;
-        assertEquals(op.finalAnswer,answer, 0.0);
-        //Teardown
     }
 
 }
