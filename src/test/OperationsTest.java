@@ -1,72 +1,55 @@
 import org.junit.Test;
 
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import static org.junit.Assert.*;
 
 public class OperationsTest {
-    Operations operations = new Operations();
+    @Test
+    public void DataDrivenOperationsTest()
+    {
+        //Setup
+        Operations op = new Operations();
+        UserInterface ui = new UserInterface();
+        ui.m_texttWindow = new JTextField();
+        ActionEvent event;
+        String testData = "";
+        double answer = Double.NEGATIVE_INFINITY;
 
-    @Test
-    public void testPerformAddition() {
-        double obj1= 5.0;
-        double obj2= operations.performAddition("2", "3");
-        assertEquals(obj1,obj2, 0.0);
-    }
+        //Read the test data
+        File testDataFile = new File("testingData/operationsIntegrationTest");
+        try {
+            Scanner fileReader = new Scanner(testDataFile);
+            testData = fileReader.nextLine();
+            answer = fileReader.nextDouble();
+        }
+        catch(FileNotFoundException e)
+        {
+            System.out.println("An error occurred reading a file.");
+            e.printStackTrace();
+        }
 
-    @Test
-    public void testPerformSubtraction() {
-        double expected= 15;
-        double actual= operations.performSubtraction("26","11");
-        assertEquals(expected,actual, 0.0);
-    }
+        //Test
+        //Iterate through chars in testData and produce events
+        for(int i = 0; i < testData.length(); i++)
+        {
+            String symbol = new String(testData.substring(i));
 
-    @Test
-    public void testPerformMultiplication() {
-        double obj1= 30.0;
-        double obj2= operations.performMultiplication("5", "6");
-        assertEquals(obj1,obj2, 0.0);
-    }
+            event = new ActionEvent(ui, 1001, symbol);
+            op.actionPerformed(event);
+        }
 
-    @Test
-    public void testPerformDivision() {
-        double obj1= 6.0;
-        double obj2= operations.performDivision("30", "5");
-        assertEquals(obj1,obj2, 0.0);
-    }
-    //test case of addition 
-    @Test
-    public void testPerformAdditionTwo() {
-        double foo= 13.0;
-        //test 
-        double bar= operations.performAddition("6", "7");
-        assertEquals(foo,bar, 0.0);
-        //teardown
-    }
-    //test case of Multiplication
-    @Test
-    public void testPerformMultiplicationTwo() {
-        double foo= 56.0;
-        //test 
-        double bar= operations.performMultiplication("7", "8");
-        assertEquals(foo,bar, 0.0);
-        //teardown
-    }
-    //test case of Subtraction
-    @Test
-    public void testPerformSubtractionTwo() {
-        double foo= 3.0;
-        //test 
-        double bar= operations.performSubtraction("13", "10");
-        assertEquals(foo,bar, 0.0);
-        //teardown
-    }
-    //test case of Division
-    @Test
-    public void testPerformDivisionTwo() {
-        double foo= 4.0;
-        //test 
-        double bar= operations.performDivision("24", "6");
-        assertEquals(foo,bar, 0.0);
-        //teardown
+        System.out.println("Jalapeno");
+        System.out.println(op.finalAnswer);
+        System.out.println(answer);
+
+        assertEquals(answer, op.finalAnswer, 0.0);
+        //Teardown
+        //...
     }
 
 }
