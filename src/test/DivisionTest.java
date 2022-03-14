@@ -1,26 +1,26 @@
 import static org.junit.Assert.*;
-import org.junit.Assert;
+
 import org.junit.Test;
 
-public class multiplicationTest {
+public class DivisionTest {
     public Operations operations = new Operations();
     @Test
-    public void testMultiplicationFail() {
+    public void testDivisionFail() {
         //Setup
         Operations operations = new Operations();
-        double expected = 37.0;
+        double expected = 3.0;
         //Test
-        double actual = operations.performMultiplication("6","6");
+        double actual = operations.performDivision("10","0");
         assertNotEquals(expected, actual, 0.0);
 
     }
     @Test
-    public void testMultiplicationPass() {
+    public void testDivisionPass() {
         //Setup
         Operations operations = new Operations();
-        double expected = 36.0;
+        double expected = 5.0;
         //Test
-        double actual = operations.performMultiplication("6", Double.toString(operations.performMultiplication("3","2")));
+        double actual = operations.performDivision("10", Double.toString(operations.performDivision("10","5")));
         assertEquals(expected, actual, 0.0);
 
     }

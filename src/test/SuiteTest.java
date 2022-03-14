@@ -10,9 +10,9 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({additionTest.class, OperationIntegrationTest.class, divisionTest.class, multiplicationTest.class, subtractionTest.class, additionTest.class, OperationIntegrationTest.class, divisionTest.class, multiplicationTest.class, subtractionTest.class})
+@SuiteClasses({AdditionTest.class, OperationIntegrationTest.class, DivisionTest.class, MultiplicationTest.class, SubtractionTest.class, AdditionTest.class, OperationIntegrationTest.class, DivisionTest.class, MultiplicationTest.class, SubtractionTest.class})
 
-public class suiteTest {
+public class SuiteTest {
     @Test
     public void OperationsTestSuite()
     {
