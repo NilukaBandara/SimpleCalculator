@@ -37,7 +37,7 @@ public class OperationsTest {
         //Iterate through chars in testData and produce events
         for(int i = 0; i < testData.length(); i++)
         {
-            String symbol = new String(testData.substring(i, i+1));
+            String symbol = testData.substring(i, i+1);
             event = new ActionEvent(ui, 1001, symbol);
             op.actionPerformed(event);
         }
