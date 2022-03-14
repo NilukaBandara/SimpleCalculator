@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
+import java.io.File;
+import java.util.Scanner;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
@@ -71,6 +73,38 @@ public class SuiteTest {
 
         assertEquals(answer, op.finalAnswer, 0.0);
 
+        //Teardown
+        //...
+    }
+    @Test
+    public void runDataDrivenTest()
+    {
+        File testDataFile = new File("testingData/operationsIntegrationTest");
+        Scanner fileReader = new Scanner(testDataFile);
+        String operations = fileReader.nextLine();
+        double expectedAnswer = fileReader.nextDouble();
+        DataDrivenOperationsTest(operations, expectedAnswer);
+    }
+
+    public void DataDrivenOperationsTest(String testData, double answer)
+    {
+        //Setup
+        Operations op = new Operations();
+        UserInterface ui = new UserInterface();
+        ui.m_texttWindow = new JTextField();
+        ActionEvent event;
+
+        //Test
+        //Iterate through chars in testData and produce events
+        for(int i = 0; i < testData.length(); i++)
+        {
+            String symbol = new String(testData.substring(i));
+
+            event = new ActionEvent(ui, 1001, symbol);
+            op.actionPerformed(event);
+        }
+
+        assertEquals(answer, op.finalAnswer, 0.0);
         //Teardown
         //...
     }
