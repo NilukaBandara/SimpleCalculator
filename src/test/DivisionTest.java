@@ -25,4 +25,15 @@ public class DivisionTest {
         //Teardown
         //...
     }
+    @Test
+    public void testDivisionMax() { //very high values
+        //Setup
+        Operations operations = new Operations();
+        double expected = 1;
+        //Test
+        double actual = operations.performDivision(Double.toString(Double.MAX_VALUE), Double.toString(Double.MAX_VALUE));
+        assertEquals(expected, actual, 0.0);
+        //Teardown
+        //...
+    }
 }

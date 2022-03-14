@@ -25,4 +25,15 @@ public class SubtractionTest {
         //Teardown
         //...
     }
+    @Test
+    public void testSubtractionMax() { //very high values
+        //Setup
+        Operations operations = new Operations();
+        double expected = 0;
+        //Test
+        double actual = operations.performSubtraction(Double.toString(Double.MAX_VALUE), Double.toString(Double.MAX_VALUE));
+        assertEquals(expected, actual, 0.0);
+        //Teardown
+        //...
+    }
 }

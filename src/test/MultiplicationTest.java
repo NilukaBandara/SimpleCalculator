@@ -25,4 +25,15 @@ public class MultiplicationTest {
         //Teardown
         //...
     }
+    @Test
+    public void testMultiplicationMax() { //very high values
+        //Setup
+        Operations operations = new Operations();
+        double expected = Double.MAX_VALUE * Double.MAX_VALUE;
+        //Test
+        double actual = operations.performMultiplication(Double.toString(Double.MAX_VALUE), Double.toString(Double.MAX_VALUE));
+        assertEquals(expected, actual, 0.0);
+        //Teardown
+        //...
+    }
 }

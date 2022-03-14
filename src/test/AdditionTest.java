@@ -25,6 +25,7 @@ public class AdditionTest {
         //Teardown
         //...
     }
+    @Test
     public void testAdditionMax() { //very high values
         //Setup
         Operations operations = new Operations();
