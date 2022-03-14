@@ -7,7 +7,7 @@ public class MultiplicationTest {
     public void testMultiplicationFail() {
         //Setup
         Operations operations = new Operations();
-        double expected = 37.0;
+        double expected = 0.0;
         //Test
         double actual = operations.performMultiplication("6","6");
         assertNotEquals(expected, actual, 0.0);

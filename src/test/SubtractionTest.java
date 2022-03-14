@@ -7,7 +7,7 @@ public class SubtractionTest {
     public void testSubtractionFail() {
         //Setup
         Operations operations = new Operations();
-        double expected = 8.0;
+        double expected = 0.0;
         //Test
         double actual = operations.performSubtraction("12","6");
         assertNotEquals(expected, actual, 0.0);

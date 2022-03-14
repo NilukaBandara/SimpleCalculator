@@ -25,16 +25,6 @@ public class AdditionTest {
         //Teardown
         //...
     }
-    public void testAdditionHigh() { //very high values
-        //Setup
-        Operations operations = new Operations();
-        double expected = 2000000000000000000.0;
-        //Test
-        double actual = operations.performAddition("1000000000000000000", "1000000000000000000");
-        assertEquals(expected, actual, 0.0);
-        //Teardown
-        //...
-    }
     public void testAdditionMax() { //very high values
         //Setup
         Operations operations = new Operations();
