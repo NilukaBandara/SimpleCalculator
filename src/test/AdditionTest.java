@@ -10,7 +10,7 @@ public class AdditionTest {
         double expected = 0.0;
         //Test
         double actual = operations.performAddition("9","7");
-        assertNotEquals(expected, actual, 0.0);
+        assertEquals(expected, actual, 0.0);
         //Teardown
         //...
     }
